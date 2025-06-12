@@ -28,7 +28,7 @@ export default function DesafioMemoria() {
   const [primeiraEscolha, setPrimeiraEscolha] = useState<Card | null>(null)
   const [segundaEscolha, setSegundaEscolha] = useState<Card | null>(null)
   const [disabled, setDisabled] = useState(false)
-  const [jogoCompleto, setJogoCompleto] = useState(false)
+
   const [etapa, setEtapa] = useState<'fala-inicial' | 'jogo' | 'resultado'>('fala-inicial')
 
   // Inicializa as cartas embaralhadas
@@ -61,7 +61,7 @@ export default function DesafioMemoria() {
   // Verifica se completou o jogo
   useEffect(() => {
     if (cartas.length > 0 && cartas.every((c) => c.matched)) {
-      setJogoCompleto(true)
+      
       setEtapa('resultado')
       localStorage.setItem('memoryComplete', 'true')
     }
@@ -150,7 +150,6 @@ export default function DesafioMemoria() {
                   matched: false,
                 }))
                 setCartas(embaralharCartas(cartasDuplicadas))
-                setJogoCompleto(false)
                 setEtapa('jogo')
                 resetTurn()
               }}
