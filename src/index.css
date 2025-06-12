@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-outline-pink {
+  text-shadow:
+    -1px -1px 0 #ec4899, /* rosa-500 do Tailwind */
+     1px -1px 0 #ec4899,
+    -1px  1px 0 #ec4899,
+     1px  1px 0 #ec4899;
+}
