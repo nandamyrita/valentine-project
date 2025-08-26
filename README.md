@@ -1,54 +1,77 @@
-# React + TypeScript + Vite
+Jogo Interativo Dia dos Namorados 💖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web gamificada inspirada em jogos de simulação de relacionamento, com desafios interativos, diálogos e pontuação, desenvolvida com React, TypeScript, Vite e Tailwind CSS.
 
-Currently, two official plugins are available:
+Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tela de início e login para personalização da experiência.
 
-## Expanding the ESLint configuration
+Desafios interativos:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Quiz
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Jogo da memória
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Jogo da forca
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Sistema de diálogos estilo "Amor Doce" com personagem guia e balões de fala.
+
+Registro de pontuação geral (score) para cada desafio.
+
+Desbloqueio de conteúdo final (QR Code para vídeo) ao completar todos os desafios.
+
+Feedback visual e interatividade com SVGs clicáveis.
+
+
+Tecnologias Utilizadas
+
+Front-End: React, TypeScript, Tailwind CSS, Vite
+
+Estrutura de Projeto: Componentes reutilizáveis, Hooks e gerenciamento de estado
+
+Design: Layout responsivo, animações e SVGs interativos
+
+Extras: Sistema de diálogos e pontuação gamificada
+
+
+Como Executar
+
+1. Clone o repositório:
+
+
+
+git clone https://github.com/nandamyrita/nome-do-projeto.git
+
+2. Instale as dependências:
+
+
+
+npm install
+
+3. Execute a aplicação em modo de desenvolvimento:
+
+
+
+npm run dev
+
+4. Abra o navegador em http://localhost:5173 para jogar.
+
+
+
+Estrutura do Projeto
+
+src/components/ → Componentes React reutilizáveis
+
+src/pages/ → Telas principais do jogo
+
+src/assets/ → Imagens, SVGs e outros recursos visuais
+
+src/styles/ → Estilos com Tailwind CSS
+
+src/utils/ → Funções auxiliares e lógica de pontuação
+
+
+Contribuição
+
+Contribuições são bem-vindas! Abra issues ou envie pull requests para melhorias, novos desafios ou ajustes de design.
